@@ -1,12 +1,15 @@
 version: "3"
 services:
   proxy:
+    container_name: nginx_proxy
+    restart: always
     build: ./
     ports:
       - 80:80
+    volumes:
+      - ./:/usr/app
     networks:
       - app
-    command: [nginx-debug, '-g', 'daemon off;']
 
 networks:
   app:
