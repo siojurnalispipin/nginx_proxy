@@ -17,3 +17,4 @@ networks:
   app:
     external:
       name: network_sis
+command: nginx -g "daemon off"
