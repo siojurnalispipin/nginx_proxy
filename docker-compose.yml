@@ -1,8 +1,10 @@
 version: "3"
 services:
-  proxy:
+  webserver:
+    image: nginx:alpine
     container_name: nginx_proxy
     restart: always
+    tty: true
     build: ./
     volumes:
       - ./backend-not-found.html:/var/www/html/backend-not-found.html
@@ -12,7 +14,6 @@ services:
       - 80:80
     networks:
       - app
-    command: nginx -g "daemon off"
 
 networks:
   app:
