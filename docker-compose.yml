@@ -12,9 +12,9 @@ services:
       - 80:80
     networks:
       - app
+    command: nginx -g "daemon off"
 
 networks:
   app:
     external:
       name: network_sis
-command: nginx -g "daemon off"
