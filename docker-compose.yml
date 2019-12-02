@@ -1,6 +1,6 @@
 version: "3"
 services:
-  webserver:
+  proxy:
     image: nginx:alpine
     container_name: nginx_proxy
     restart: always
