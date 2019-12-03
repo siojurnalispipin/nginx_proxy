@@ -1,7 +1,8 @@
 version: "3"
 services:
   proxy:
-    build: Dockerfile
+    build:
+      dockerfile: Dockerfile
     container_name: nginx_proxy
     restart: always
     tty: true
