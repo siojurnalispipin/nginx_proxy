@@ -2,6 +2,7 @@ version: "3"
 services:
   proxy:
     build:
+      context: .
       dockerfile: Dockerfile
     container_name: nginx_proxy
     restart: always
